@@ -9,9 +9,6 @@ tanpa perlu scroll**.
 - Input biodata: **Nama, Kelas, Absen, JK (Jenis Kelamin), Nomer HP**
 - Setelah "difoto", otomatis menampilkan **ID Card / Passport** dalam mode
   portrait, dark mode, satu kartu (card) penuh tanpa header/footer.
-- Foto pada kartu otomatis dipilih berdasarkan JK:
-  - Laki-Laki → `img/foto-male.jpg`
-  - Perempuan → `img/foto-female.jpg`
 - Menampilkan info **AWS Environment** di bagian bawah kartu: EC2 Instance
   ID, EC2 Public IP, RDS Endpoint, Region/AZ. Data ini **diambil langsung
   dari AWS EC2 Instance Metadata Service (IMDSv2)** jika aplikasi memang
@@ -38,8 +35,6 @@ idcard-app/
 ├── js/
 │   └── app.js        # Logika kamera & render kartu
 ├── img/
-│   ├── foto-male.jpg
-│   └── foto-female.jpg
 └── README.md
 ```
 
