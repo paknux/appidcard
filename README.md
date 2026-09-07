@@ -43,7 +43,7 @@ idcard-app/
 ### 1. Persyaratan
 - PHP 7.4+ dengan ekstensi `mysqli`
 - MySQL / MariaDB Server
-- Web server: Apache/Nginx (atau bisa pakai PHP built-in server untuk testing)
+- Web server: Apache2
 
 ### 2. Setup
 
@@ -72,12 +72,7 @@ idcard-app/
    ...
    ```
 
-4. Jalankan dengan PHP built-in server (untuk testing lokal):
-   ```bash
-   cd idcard-app
-   php -S 0.0.0.0:8000
-   ```
-   Lalu akses dari browser HP/desktop yang satu jaringan:
+4. Akses dari browser HP/desktop yang satu jaringan:
    ```
    http://<IP-KOMPUTER-ANDA>:8000
    ```
