@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0d1117;
+    color: #e6edf3;
+    overflow: hidden; /* no scroll */
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.app-wrap {
+    height: 100vh;
+    height: 100dvh; /* fix mobile viewport height */
+    width: 100vw;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.single-card {
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    color: #e6edf3;
+    overflow: hidden;
+}
+
+.title-app {
+    color: #f0c419;
+    letter-spacing: .5px;
+}
+
+.form-label {
+    color: #9da7b3;
+    font-size: .78rem;
+}
+
+.form-control, .form-select {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: #e6edf3;
+}
+.form-control:focus, .form-select:focus {
+    background: #0d1117;
+    color: #fff;
+    border-color: #f0c419;
+    box-shadow: 0 0 0 .15rem rgba(240,196,25,.25);
+}
+.form-control::placeholder { color: #6e7681; }
+
+/* ===== Simulasi Kamera ===== */
+.camera-box { height: 100%; }
+.camera-frame {
+    width: 70%;
+    aspect-ratio: 3/4;
+    border: 2px dashed #f0c419;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0d1117;
+    overflow: hidden;
+}
+.camera-icon { font-size: 2.5rem; opacity: .5; }
+.scan-line {
+    position: absolute;
+    left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #f0c419, transparent);
+    animation: scan 1.4s linear infinite;
+}
+@keyframes scan {
+    0% { top: 0%; }
+    100% { top: 100%; }
+}
+
+/* ===== ID Card ===== */
+.id-card { justify-content: space-between; }
+.id-header { border-bottom: 1px solid #30363d; padding-bottom: 2px; margin-bottom: 2px; }
+.tiny { font-size: .66rem; }
+
+.foto-utama {
+    max-width: 82%;
+    max-height: 44vh;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* jaga rasio asli foto, tidak dicrop paksa */
+    border-radius: 10px;
+    border: 2px solid #f0c419;
+    background: #0d1117;
+}
+
+.biodata-box { margin-top: 2px; }
+.table-biodata {
+    width: 100%;
+    font-size: .74rem;
+    border-collapse: collapse;
+}
+.table-biodata td {
+    padding: 1px 2px;
+    vertical-align: top;
+}
+.table-biodata td:first-child {
+    width: 58px;
+    color: #9da7b3;
+}
+.table-biodata td:nth-child(2) {
+    width: 8px;
+    color: #9da7b3;
+}
+.table-biodata td:last-child {
+    font-weight: 600;
+    color: #fff;
+    word-break: break-word;
+}
+
+.aws-box {
+    margin-top: 2px;
+    padding: 4px 6px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+}
+.aws-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    color: #9da7b3;
+}
+#awsSource {
+    font-size: .58rem;
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+
+.aws-line span:last-child {
+    color: #7ee787;
+    font-family: monospace;
+    max-width: 62%;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Small height phones */
+@media (max-height: 640px) {
+    .foto-utama { max-height: 36vh; }
+    .table-biodata { font-size: .7rem; }
+    .tiny { font-size: .62rem; }
+}
