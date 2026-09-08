@@ -63,16 +63,7 @@ idcard-app/
    > Anda **tidak perlu** membuat database/tabel secara manual — aplikasi
    > akan membuatnya otomatis saat pertama kali diakses/menyimpan data.
 
-3. (Opsional) Sesuaikan info AWS dummy di `konfig.php` jika ingin
-   menampilkan info environment server Anda yang sebenarnya:
-   ```php
-   define('AWS_EC2_INSTANCE_ID', 'i-0a1b2c3d4e5f6g7h8');
-   define('AWS_EC2_PUBLIC_IP', '13.212.45.101');
-   define('AWS_RDS_ENDPOINT', 'db-idcard.xxxxx.rds.amazonaws.com');
-   ...
-   ```
-
-4. Akses dari browser HP/desktop yang satu jaringan:
+3. Akses dari browser HP/desktop yang satu jaringan:
    ```
    http://<IP-KOMPUTER-ANDA>:8000
    ```
